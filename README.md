@@ -1,4 +1,8 @@
-# PyFluid ![PyFluid Simulation Example](_static/logo.png)
+<p align="center">
+  <img src="_static/logo.png" width="200" alt="PyFluid Simulation logo">
+</p>
+
+# PyFluid
 
 
 ## Overview
