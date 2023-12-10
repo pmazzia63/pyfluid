@@ -1,0 +1,2 @@
+class SolverSettings:
+    pass

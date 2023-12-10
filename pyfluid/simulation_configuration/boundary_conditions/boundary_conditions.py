@@ -1,0 +1,2 @@
+class BoundaryConditions:
+    pass
