@@ -23,6 +23,7 @@ jobs:
     steps: 
       - name: tests
         run:
+          ls -all
           pip install -r requirements.txt
           pip install .
           pytest
