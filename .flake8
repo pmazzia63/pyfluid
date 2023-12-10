@@ -1,0 +1,4 @@
+[flake8]
+extend-exclude=env,venv,dist,build,docs
+show-source=True
+statistics=True
