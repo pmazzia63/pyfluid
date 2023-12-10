@@ -8,29 +8,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Job for running tests
-  tests:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      # Checkout your code into the runner's filesystem
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Run tests
-      run: |
-        pip install -r requirements.txt
-        pip install .
-        pytest
+      # Your existing steps
+      - name: tests
+        run: |
+          ls -all
+          pip install -r requirements.txt
+          pip install .
+          pytest
 
-  # Job for linting
-  linting:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Lint code
-      run: |
-        pip install flake8
-        flake8 .
+      - name: linting
+        run: |
+          pip install flake8
+          flake8 .
