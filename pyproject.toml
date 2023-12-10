@@ -1,17 +1,19 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-name = "PyFluid"
+py-modules = []
+
+[project]
+name = "pyfluid"
 version = "0.1.0"
 description = "A high-performance Computational Fluid Dynamics (CFD) simulation package for Python."
-long_description = "file: README.md"
-long_description_content_type = "text/markdown"
-url = "https://github.com/pmazzia63/pyfluid"
-author = "Paul MAZZIA"
-author_email = "p.mazzia63@gmail.com"
-license = "MIT"
+authors = [  # Information about the authors
+  {name = "Paul MAZZIA", email = "p.mazzia63@gmail.com"}
+]
+license = {file = "LICENSE"}
+keywords = ["CFD", "fluid dynamics", "simulation"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
@@ -19,20 +21,5 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.10",
 ]
-keywords = "CFD, fluid dynamics, simulation"
-packages = setuptools.find_packages()
-install_requires = [
-]
-
-python_requires = ">=3.10"
-
-[tool.setuptools.scripts]
-# If you have any scripts to include, list them here. For example:
-# pyfluid-run = pyfluid.cli:main
-
-[tool.setuptools.extras_require]
-dev = [
-    "pytest>=6.0",
-    # Other development dependencies like linters, doc generators, etc.
-]
+requires-python = ">=3.10"  # Minimum required Python version
 
